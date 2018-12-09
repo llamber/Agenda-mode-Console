@@ -193,7 +193,7 @@ public class GestionAgenda implements Serializable{
      * @param agenda
      */
     public static void traiterChoixSupprimerTousRDV(ArrayList<RendezVous> agenda) {
-        agenda.forEach((_item) -> {
+        agenda.forEach((_item) -> {     
             agenda.remove(1);
 
         });
@@ -274,7 +274,7 @@ public class GestionAgenda implements Serializable{
         fos = new FileOutputStream(nomFichier);
         oos = new ObjectOutputStream(fos);
         oos.writeObject(agenda);
-        oos.flush();
+        oos.flush(); //Permet de vider les buffer d'écriture vers le medium de sortir
         oos.close();
     }
 
