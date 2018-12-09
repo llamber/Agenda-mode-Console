@@ -131,9 +131,7 @@ public class GestionAgenda implements Serializable{
      * @param agenda
      */
     public static void traiterChoixAfficherRDV_Entre2Dates(ArrayList<RendezVous> agenda) {
-        AffichageConsole.afficherSaisiDate();
         LocalDate date1 = Date();
-        AffichageConsole.afficherSaisiDate();
         LocalDate date2 = Date();
         for (int i = 0; i < agenda.size(); i++) {
             if (agenda.get(i).getDate().isAfter(date1) && agenda.get(i).getDate().isBefore(date2)) {
