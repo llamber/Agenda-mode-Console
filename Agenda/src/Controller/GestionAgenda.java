@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Ludo
+ * @author Pierre & Ludo
  */
 public class GestionAgenda implements Serializable{
     /*
@@ -55,9 +55,11 @@ public class GestionAgenda implements Serializable{
         Scanner sc = new Scanner(System.in);
         String nom = sc.nextLine();
         ArrayList<RendezVous> agenda = new ArrayList<>();
+        //Gestion des erreurs 
         try {
             save(agenda, nom);
         } catch (IOException ex) {
+        //permet de délivrer un message avec un niveau de gravité associé
             Logger.getLogger(GestionAgenda.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -66,6 +68,7 @@ public class GestionAgenda implements Serializable{
      * @throws IOException
      * @throws java.lang.ClassNotFoundException
      */
+    //le throws permet de propager les exceptions
     public static void traiterChoixOuvrirAgenda() throws IOException, ClassNotFoundException {
         AffichageConsole.afficherSaisiNom();
         Scanner sc = new Scanner(System.in);
@@ -77,6 +80,7 @@ public class GestionAgenda implements Serializable{
     /**
      * @param agenda
      */
+    //Permet d'afficher le mode console du menu2 en ouvrant l'agenda
     public static void gererAgenda(ArrayList agenda) {
         int choix;
         Scanner sc = new Scanner(System.in);

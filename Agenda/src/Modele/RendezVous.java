@@ -12,10 +12,10 @@ import java.util.Comparator;
 
 /**
  *
- * @author Ludo
+ * @author Ludo & Pierre
  */
 public class RendezVous implements Serializable{
-        String libelle;
+    String libelle;
     LocalDate date;
     LocalTime heureDebut, heureFin;
     boolean rappel;

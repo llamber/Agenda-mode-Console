@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Ludo
+ * @author Pierre & Ludo
  */
 public class MainAgenda {
 

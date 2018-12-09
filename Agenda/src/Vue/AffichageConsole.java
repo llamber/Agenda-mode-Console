@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Ludo
+ * @author Ludo & Pierre
  */
 public class AffichageConsole {
         static public void affichermenu1() {
