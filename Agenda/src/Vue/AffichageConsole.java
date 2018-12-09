@@ -49,14 +49,11 @@ public class AffichageConsole {
 
     static public void affichageTraitementMenu2(int choix1) {
         switch (choix1) {
-            case 0:
-                System.out.println("Affichage tous les RDV");
-                break;
             case 1:
                 System.out.println("Affichage tous les RDV entre 2 dates");
                 break;
             case 2:
-                System.out.println(" Affichage des RDV filtrés sur critère(s)");
+                System.out.println("Affichage tous les RDV");
                 break;
             case 3:
                 System.out.println("Modification d'un rendez-vous");

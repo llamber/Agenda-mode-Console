@@ -82,15 +82,11 @@ public class RendezVous implements Serializable{
                 this.rappel + ", libelle=" + this.libelle + "]";
     }
     
-    public static Comparator<RendezVous> Comparator = new Comparator<RendezVous>() {
-      
-        @Override
-        public int compare(RendezVous e1, RendezVous e2) {
-            if(e1.getDate().compareTo(e2.getDate())==0){
-                return e1.getHeureDebut().compareTo(e2.getHeureDebut());
-            }else{
-                return e1.getDate().compareTo(e2.getDate());
-            }
+    public static Comparator<RendezVous> Comparator = (RendezVous e1, RendezVous e2) -> {
+        if(e1.getDate().compareTo(e2.getDate())==0){
+            return e1.getHeureDebut().compareTo(e2.getHeureDebut());
+        }else{
+            return e1.getDate().compareTo(e2.getDate());
         }
-    };
+        };
 }

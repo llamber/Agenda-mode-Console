@@ -150,7 +150,7 @@ public class GestionAgenda implements Serializable{
         LocalTime hFin;
         do{
         hFin = heureFin();   
-        }while(hDebut.isBefore(hFin));
+        }while(!(hDebut.isBefore(hFin)));
         boolean rappel = rappel();
         String libelle = libelle();
         RendezVous rdv = new RendezVous(date, hDebut, hFin, rappel, libelle);
@@ -169,7 +169,7 @@ public class GestionAgenda implements Serializable{
         LocalTime hFin;
         do{
         hFin = heureFin();   
-        }while(hDebut.isBefore(hFin));
+        }while(!(hDebut.isBefore(hFin)));
         boolean rappel = rappel();
         String libelle = libelle();
         RendezVous rdv = new RendezVous(date, hDebut, hFin, rappel, libelle);
